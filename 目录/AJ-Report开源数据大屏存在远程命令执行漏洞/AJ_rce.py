@@ -1,3 +1,6 @@
+#fofa语法
+#title="AJ-Report"
+
 import requests,argparse,sys
 from multiprocessing.dummy import Pool
 
@@ -63,4 +66,5 @@ def main():
             
     
 if __name__=='__main__':
+
     main()
