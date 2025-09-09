@@ -1,3 +1,5 @@
+#fofa
+#body="getincommingcall"
 import requests
 import argparse
 import sys
@@ -110,4 +112,5 @@ def main():
             print(f"[!] 读取文件时发生错误: {e}")
 
 if __name__ == '__main__':
+
     main()
